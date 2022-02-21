@@ -130,7 +130,7 @@ func TestThresholdValidator2of2(test *testing.T) {
 
 	raftStore.SetThresholdValidator(validator)
 
-	err = raftStore.Open()
+	_, err = raftStore.Open()
 	require.NoError(test, err)
 
 	time.Sleep(3 * time.Second) // Ensure there is a leader
@@ -280,7 +280,7 @@ func TestThresholdValidator3of3(test *testing.T) {
 
 	raftStore.SetThresholdValidator(validator)
 
-	err = raftStore.Open()
+	_, err = raftStore.Open()
 	require.NoError(test, err)
 
 	time.Sleep(3 * time.Second) // Ensure there is a leader
@@ -433,7 +433,7 @@ func TestThresholdValidator2of3(test *testing.T) {
 
 	raftStore.SetThresholdValidator(validator)
 
-	err = raftStore.Open()
+	_, err = raftStore.Open()
 	require.NoError(test, err)
 
 	time.Sleep(3 * time.Second) // Ensure there is a leader
